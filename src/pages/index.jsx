@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import MainSlide from "@/components/MainSlide";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -9,8 +10,8 @@ export default function Home() {
       <div className="position-absolute bottom-0 end-50">
         <MainSlide />
       </div>
-      
       <Link href="/login">Login</Link>
+      <Footer />
     </div>
   );
 }
