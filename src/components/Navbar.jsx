@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid text-center d-flex">
+      <div className="container-fluid position-absolute top-100 start-50 translate-middle-x">
         <Image src="/images/Logo.svg" width={130} height={110} />
         <Link href="/" className="navbar-brand">
-          Navbar
+          Find Therapist
         </Link>
         <button
           className="navbar-toggler"
@@ -23,13 +23,16 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link className="nav-link active" aria-current="page" href="/">
-              Home
+              About
             </Link>
             <Link className="nav-link" href="/login">
-              Features
+              Blog
             </Link>
             <Link className="nav-link" href="/">
-              Pricing
+              Provider Login
+            </Link>
+            <Link className="nav-link" href="/">
+              EN
             </Link>
           </div>
         </div>
