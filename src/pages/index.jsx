@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import MainSlide from "@/components/MainSlide";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
         <MainSlide />
       </div>
       <Link href="/login">Login</Link>
-      <Footer />
     </div>
   );
 }

@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid position-absolute top-100 start-50 translate-middle-x">
+      <div className="container-fluid position-absolute top-100 start-50 translate-middle-x ">
         <Image src="/images/Logo.svg" width={130} height={110} />
         <Link href="/" className="navbar-brand">
-          Find Therapist
         </Link>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -28,9 +28,8 @@ export default function Navbar() {
             <Link className="nav-link" href="/login">
               Blog
             </Link>
-            <Link className="nav-link" href="/">
-              Provider Login
-            </Link>
+            <button type="button" class="btn btn-secondary" disabled>Find Therapist</button>
+            <button type="button" class="btn btn-outline-secondary">Provider Login</button>
             <Link className="nav-link" href="/">
               EN
             </Link>
