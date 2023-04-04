@@ -8,7 +8,7 @@ export const Insurance = () => {
         including:
       </h6>
       <p>
-        <Image src="/images/Insurance.png" width={550} height={130} />
+        <Image src="/images/Insurance.png" width={410} height={90} />
       </p>
       <h4 className="text-center mt-5">
         Experience a clinician first-approach to mental health care{" "}
