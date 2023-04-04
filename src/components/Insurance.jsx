@@ -1,19 +1,18 @@
 import Image from "next/image";
 
-export const Welcome = () => {
+export const Insurance = () => {
   return (
     <div className="text-center">
-      <h1 className="text-center mt-5">Our treatments and programs are covered by most insurance companies including:</h1>
+      <h6 className="text-center mt-5">
+        Our treatments and programs are covered by most insurance companies
+        including:
+      </h6>
       <p>
-        <Image
-          src="/images/insurance.png"
-          width={1204}
-          height={119}
-        />
+        <Image src="/images/Insurance.png" width={550} height={130} />
       </p>
-      <a href="#" className="btn btn-success">
-      Experience a clinician-first approach to mental health care.
-      </a>
+      <h4 className="text-center mt-5">
+        Experience a clinician first-approach to mental health care{" "}
+      </h4>
     </div>
   );
 };
