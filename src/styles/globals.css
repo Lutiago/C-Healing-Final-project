@@ -1,4 +1,10 @@
+
 .footer {
     background-color: rgb(152, 228, 228);
     height: 150px;
+}
+
+.form {
+    background-color: rgb(184, 184, 183);
+    padding: 80px;
 }

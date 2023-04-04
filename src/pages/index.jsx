@@ -3,6 +3,7 @@ import Link from "next/link";
 import MainSlide from "@/components/MainSlide";
 import { Insurance } from "@/components/Insurance";
 import { Footer } from "@/components/Footer";
+import { FormMain } from "@/components/FormMain";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <MainSlide />
       </div>
       <Insurance />
+      <FormMain />
       <Footer />
       <Link href="/login">Login</Link>
     </div>
