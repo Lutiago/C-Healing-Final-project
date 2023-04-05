@@ -6,8 +6,8 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex pb-5" >
       <div className="justify-content-center container-fluid position-relative top-100 start-50 translate-middle-x ">
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-        <Image src="/images/Logo.svg" width={130} height={110} />
-        <Link href="/Index" className="navbar-brand"></Link>
+       
+        <Link href="/" className="navbar-brand"> <Image src="/images/Logo.svg" width={130} height={110} /></Link>
 
         <button
           className="navbar-toggler"
@@ -27,12 +27,12 @@ export default function Navbar() {
             <Link className="nav-link" href="/Blog">
               Blog
             </Link>
-            <button type="button" class="btn btn-secondary">
-              Find Therapist
-            </button>
-            <button type="button" class="btn btn-outline-secondary">
-              Provider Login
-            </button>
+            <Link className="btn btn-secondary" href="/FindTherapist">
+            Find Therapist
+            </Link>
+            <Link className="btn btn-outline-secondary" href="/ProviderLogin">
+            Provider Login
+            </Link>
             <div class="dropdown">
               <button
                 class="btn btn-secondary dropdown-toggle"

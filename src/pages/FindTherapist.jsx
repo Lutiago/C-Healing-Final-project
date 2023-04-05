@@ -1,13 +1,11 @@
-import Navbar from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FindTherapist } from "@/components/FindTherapist";
+import { FindProvider } from "@/components/FindProvider";
 
 export default function FindTherapists() {
   return (
     <div className="text-center">
-      <Navbar />
-      <FindTherapist />
-       <Footer />
+
+      <FindProvider />
+
        </div>
        );
 }
