@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="justify-content-center container-fluid position-relative top-100 start-50 translate-middle-x ">
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <Image src="/images/Logo.svg" width={130} height={110} />
-        <Link href="/" className="navbar-brand"></Link>
+        <Link href="/Index" className="navbar-brand"></Link>
 
         <button
           className="navbar-toggler"
@@ -21,10 +21,10 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
           <div className="navbar-nav  gap-4">
-            <Link className="nav-link active" aria-current="page" href="/">
+            <Link className="nav-link active" aria-current="page" href="/About">
               About
             </Link>
-            <Link className="nav-link" href="/login">
+            <Link className="nav-link" href="/Blog">
               Blog
             </Link>
             <button type="button" class="btn btn-secondary">
