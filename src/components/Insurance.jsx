@@ -10,9 +10,9 @@ export const Insurance = () => {
       <p>
         <Image src="/images/Insurance.png" width={410} height={90} />
       </p>
-      <h7 className="text-center mt-5">
+      <h8 className="text-center mt-5">
       Interested in request a consultant? Fill out the form below and register to be part of our family.{" "}
-      </h7>
+      </h8>
       <h4 className="text-center mt-5">
         Experience a clinician first-approach to <br/>mental health care{" "}
       </h4>

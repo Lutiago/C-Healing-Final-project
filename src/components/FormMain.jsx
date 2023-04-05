@@ -34,6 +34,8 @@ export const FormMain = () => {
             aria-label="Last name"
           />
         </div>
+        <p>By submitting this form, you agreeing with C Healing's
+privacy policy</p>
         <button type="button" class="btn btn-outline-secondary">
           SIGN IN
         </button>

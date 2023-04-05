@@ -1,0 +1,14 @@
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import { Footer } from "@/components/Footer";
+import { slideAbout} from "@/components/slideAbout"
+
+export default function Home() {
+  return (
+    <div className="text-center">
+      <Navbar />
+      <slideAbout /
+       <Footer />
+      
+  );
+}
