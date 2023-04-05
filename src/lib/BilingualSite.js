@@ -1,63 +1,68 @@
-import React, { useState, createContext } from 'react';
-import english from './english.json';
-import spanish from './spanish.json';
+import React, { useState, useEffect } from 'react';
+import { Translate } from '@google-cloud/translate';
 
-export const LanguageContext = createContext();
+// Set up the Google Translate API client
+const translate = new Translate({
+  projectId: 'your-project-id',
+  keyFilename: '/path/to/keyfile.json',
+});
 
 function App() {
-
   const [language, setLanguage] = useState('en');
+  const [content, setContent] = useState({});
 
-  const switchLanguage = (newLanguage) => {
-    setLanguage(newLanguage);
+  // Define a function to translate the content
+  const translateContent = async (targetLanguage) => {
+    try {
+      const [translatedContent] = await translate.translate(content, targetLanguage);
+      setContent(translatedContent);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  return (
-    <LanguageContext.Provider value={{ language, switchLanguage }}>
-      <LanguageSwitcher />
-      <Header />
-      <Content />
-      <Footer />
-    </LanguageContext.Provider>
-  );
-}
+  // Load the initial content when the component mounts
+  useEffect(() => {
+    setContent({
+      header: {
+        title: 'My Website',
+      },
+      content: {
+        intro: 'Welcome to my website!',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      },
+      footer: {
+        copyright: 'Copyright © 2023',
+      },
+    });
+  }, []);
 
-function LanguageSwitcher() {
-
-  const { language, switchLanguage } = useContext(LanguageContext);
-
-
+  // Handle language switch
   const handleLanguageSwitch = (event) => {
-    switchLanguage(event.target.value);
+    const newLanguage = event.target.value;
+    setLanguage(newLanguage);
+    translateContent(newLanguage);
   };
 
- 
+  // Render the language switcher and translated content
   return (
-    <select value={language} onChange={handleLanguageSwitch}>
-      <option value="en">English</option>
-      <option value="es">Español</option>
-    </select>
+    <div>
+      <select value={language} onChange={handleLanguageSwitch}>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+      <Header title={content.header.title} />
+      <Content intro={content.content.intro} body={content.content.body} />
+      <Footer copyright={content.footer}/>
+    </div>
   );
 }
 
-function Header() {
-
-  const { language } = useContext(LanguageContext);
-
- 
-  const title = language === 'en' ? english.header.title : spanish.header.title;
-
-
+function Header({ title }) {
   return <h1>{title}</h1>;
 }
 
-function Content() {
-
-  const { language } = useContext(LanguageContext);
-
-  const intro = language === 'en' ? english.content.intro : spanish.content.intro;
-  const body = language === 'en' ? english.content.body : spanish.content.body;
-
+function Content({ intro, body }) {
   return (
     <div>
       <p>{intro}</p>
@@ -66,7 +71,6 @@ function Content() {
   );
 }
 
-function Footer() {
-
-  const { language } = useContext(LanguageContext);
-
+function Footer({ copyright }) {
+  return <p>{copyright}</p>;
+}
