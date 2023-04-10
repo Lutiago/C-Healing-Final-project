@@ -39,6 +39,31 @@ export const FindProvider = () => {
           <option value="5">Medication therapy</option>
         </select>
       </div>
+       <div className="input-group mb-3">
+        <label className="input-group-text" for="inputGroupSelect01">
+          <BsFillHouseHeartFill /> Your state*
+        </label>
+        <select className="form-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">Alabama</option>
+          <option value="2">Alaska</option>
+          <option value="3">Arizona</option>
+          <option value="4">Arkanzas</option>
+          <option value="5">California</option>
+          <option value="6">Colorado</option>
+          <option value="7">Connecticut</option>
+        </select>
+      </div>
+       <div className="input-group mb-3">
+        <label className="input-group-text" for="inputGroupSelect01">
+          <BsFillHouseHeartFill /> Virtual or in person?
+        </label>
+        <select className="form-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">Virtual</option>
+          <option value="2">In person</option>
+        </select>
+      </div>
     </>
   );
 };
