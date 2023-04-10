@@ -12,6 +12,8 @@ export const FindProvider = () => {
 
   return (
     <>
+    <h7>FIND A PROVIDER</h7>
+    <h1>Find the provider who's right for you.</h1>
       <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
           <MdChair /> What type of service?
@@ -28,15 +30,15 @@ export const FindProvider = () => {
 
       <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
-          <BsFillHouseHeartFill /> What type of service?
+          <BsFillHouseHeartFill /> Which Insurance?
         </label>
         <select className="form-select" id="inputGroupSelect01">
           <option selected>Choose...</option>
-          <option value="1">Individual therapy</option>
-          <option value="2">Couples therapy</option>
-          <option value="3">Family therapy</option>
-          <option value="4">Child and adolescent therapy</option>
-          <option value="5">Medication therapy</option>
+          <option value="1">Kaiser foundation</option>
+          <option value="2">Aethna life insurance</option>
+          <option value="3">Blue Cross</option>
+          <option value="4">United healthcare</option>
+          <option value="5">Cigna healthcare</option>
         </select>
       </div>
       <div className="input-group mb-3">
@@ -66,6 +68,7 @@ export const FindProvider = () => {
           <option value="2">In person</option>
         </select>
       </div>
+      <button type="button" className="btn btn-outline-dark mt-3">Explore Providers</button>
       <div className="d-flex align-items-left justify-content-left">
         <span className="fs-2">
           {" "}
@@ -80,8 +83,10 @@ export const FindProvider = () => {
           While our team helps you navigate the search process, we don’t
           prescribe the rest. Each provider at C Healing sets their own rates
           and makes their own decisions about going in-network with major
-          insurance payers. 1. Browse our directory 2. Book a consultation 3.
-          Decide on the right fit for you
+          insurance payers.
+           1. Browse our directory 
+           2. Book a consultation 
+           3. Decide on the right fit for you
         </span>
       </div>
     </>
