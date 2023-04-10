@@ -39,7 +39,7 @@ export const FindProvider = () => {
           <option value="5">Medication therapy</option>
         </select>
       </div>
-       <div className="input-group mb-3">
+      <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
           <BsFillHouseHeartFill /> Your state*
         </label>
@@ -52,9 +52,11 @@ export const FindProvider = () => {
           <option value="5">California</option>
           <option value="6">Colorado</option>
           <option value="7">Connecticut</option>
+          <option value="8">Delaware</option>
+          <option value="9">Florida</option>
         </select>
       </div>
-       <div className="input-group mb-3">
+      <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
           <BsFillHouseHeartFill /> Virtual or in person?
         </label>
@@ -63,6 +65,24 @@ export const FindProvider = () => {
           <option value="1">Virtual</option>
           <option value="2">In person</option>
         </select>
+      </div>
+      <div className="d-flex align-items-left justify-content-left">
+        <span className="fs-2">
+          {" "}
+          How does
+          <br /> C Healing work
+        </span>
+      </div>
+      <div className="d-flex align-items-center justify-content-right">
+        <span className="fs-7">
+          {" "}
+          C Healing is a community of independent mental health care providers.
+          While our team helps you navigate the search process, we don’t
+          prescribe the rest. Each provider at C Healing sets their own rates
+          and makes their own decisions about going in-network with major
+          insurance payers. 1. Browse our directory 2. Book a consultation 3.
+          Decide on the right fit for you
+        </span>
       </div>
     </>
   );
