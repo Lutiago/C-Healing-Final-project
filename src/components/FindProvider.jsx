@@ -7,7 +7,10 @@ import { useQuery } from "@tanstack/react-query";
 
 export const FindProvider = () => {
   const [selectedService, setSelectedService] = useState("");
-  const [selectedItem, setSelectedItem] = useState("Action");
+  const [selectedState, setSelectedState] = useState("");
+  const [selectedPlace, setSelectedPlace] = useState("");
+  const [selectedInsurance, setSelectedInsurance] = useState("");
+  const [providers, setProviders] = useState([]);
   const supabase = useSupabaseClient();
   const getInsuranceCarriers = async () => {
     let { data: insuranceCarriers, error } = await supabase
@@ -20,10 +23,27 @@ export const FindProvider = () => {
     queryFn: getInsuranceCarriers,
     initialData: [],
   });
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
+  const handleExplore = async () => {
+    let query = supabase.from("Providers").select("*");
+    if (selectedState !== "") {
+      query = query.eq("state", selectedState);
+    }
+    if (selectedService !== "") {
+      query = query.eq("specialty", selectedService);
+    }
+    if (selectedPlace === "virtual") {
+      query = query.eq("virtual", true);
+    }
+    if (selectedPlace === "in_person") {
+      query = query.eq("in_person", true);
+    }
 
+    let { data, error } = await query;
+    setProviders(data);
+
+    // Filters
+    //.eq("column", "Equal to")
+  };
   return (
     <>
       <h7>FIND A PROVIDER</h7>
@@ -40,11 +60,13 @@ export const FindProvider = () => {
             setSelectedService(ev.target.value);
           }}
         >
-          <option>Choose...</option>
+          <option value="">Choose...</option>
           <option value="Individual therapy">Individual therapy</option>
           <option value="Couples therapy">Couples therapy</option>
           <option value="Family therapy">Family therapy</option>
-          <option value="Child and adolescent therapy">Child and adolescent therapy</option>
+          <option value="Child and adolescent therapy">
+            Child and adolescent therapy
+          </option>
           <option value="Medication therapy">Medication therapy</option>
         </select>
       </div>
@@ -53,8 +75,15 @@ export const FindProvider = () => {
         <label className="input-group-text" for="inputGroupSelect01">
           <BsFillHouseHeartFill /> Which Insurance?
         </label>
-        <select className="form-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
+        <select
+          className="form-select"
+          id="inputGroupSelect01"
+          value={selectedInsurance}
+          onChange={(ev) => {
+            setSelectedInsurance(ev.target.value);
+          }}
+        >
+          <option value="">Choose...</option>
           {insuranceCarriers.data.map((carrier) => {
             return (
               <option key={carrier.id} value={carrier.id}>
@@ -68,30 +97,50 @@ export const FindProvider = () => {
         <label className="input-group-text" for="inputGroupSelect01">
           <BsFillHouseHeartFill /> Your state*
         </label>
-        <select className="form-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">Alabama</option>
-          <option value="2">Alaska</option>
-          <option value="3">Arizona</option>
-          <option value="4">Arkanzas</option>
-          <option value="5">California</option>
-          <option value="6">Colorado</option>
-          <option value="7">Connecticut</option>
-          <option value="8">Delaware</option>
-          <option value="9">Florida</option>
+        <select
+          className="form-select"
+          id="inputGroupSelect01"
+          value={selectedState}
+          onChange={(ev) => {
+            setSelectedState(ev.target.value);
+          }}
+        >
+          <option value="">Choose...</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Alaska">Alaska</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Arkanzas">Arkanzas</option>
+          <option value="California">California</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Connecticut">Connecticut</option>
+          <option value="Delaware">Delaware</option>
+          <option value="Florida">Florida</option>
+          <option value="Ohio">Ohio</option>
+          <option value="Washington">Washington</option>
         </select>
       </div>
       <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
           <BsFillHouseHeartFill /> Virtual or in person?
         </label>
-        <select className="form-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">Virtual</option>
-          <option value="2">In person</option>
+        <select
+          className="form-select"
+          id="inputGroupSelect01"
+          value={selectedPlace}
+          onChange={(ev) => {
+            setSelectedPlace(ev.target.value);
+          }}
+        >
+          <option value="">Choose...</option>
+          <option value="virtual">Virtual</option>
+          <option value="in_person">In person</option>
         </select>
       </div>
-      <button type="button" className="btn btn-outline-dark mt-3">
+      <button
+        type="button"
+        className="btn btn-outline-dark mt-3"
+        onClick={handleExplore}
+      >
         Explore Providers
       </button>
     </>
