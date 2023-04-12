@@ -21,7 +21,6 @@ export const FindProvider = () => {
   const insuranceCarriers = useQuery({
     queryKey: ["insuranceCarriers"],
     queryFn: getInsuranceCarriers,
-    initialData: [],
   });
   const handleExplore = async () => {
     let query = supabase.from("Providers").select("*");
@@ -84,13 +83,14 @@ export const FindProvider = () => {
           }}
         >
           <option value="">Choose...</option>
-          {insuranceCarriers.data.map((carrier) => {
-            return (
-              <option key={carrier.id} value={carrier.id}>
-                {carrier.name}
-              </option>
-            );
-          })}
+          {insuranceCarriers.data &&
+            insuranceCarriers.data.map((carrier) => {
+              return (
+                <option key={carrier.id} value={carrier.id}>
+                  {carrier.name}
+                </option>
+              );
+            })}
         </select>
       </div>
       <div className="input-group mb-3">
@@ -143,6 +143,29 @@ export const FindProvider = () => {
       >
         Explore Providers
       </button>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          {providers.map(p => {
+            return  <tr>
+            <th scope="row">1</th>
+            <td>{p.name}</td>
+            <td>{p.last_name}</td>
+            <td>{p.email}</td>
+          </tr>
+          })}
+         
+          
+        </tbody>
+      </table>
     </>
   );
 };
