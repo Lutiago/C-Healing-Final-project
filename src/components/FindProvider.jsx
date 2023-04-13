@@ -44,9 +44,10 @@ export const FindProvider = () => {
     //.eq("column", "Equal to")
   };
   return (
-    <>
+    <div className="">
       <h7>FIND A PROVIDER</h7>
-      <h1>Find the provider who's right for you.</h1>
+      <div className="container bg-success-subtle">
+      <h1>Find the provider who&lsquo;s right for you.</h1>
       <div className="input-group mb-3">
         <label className="input-group-text" for="inputGroupSelect01">
           <MdChair /> What type of service?
@@ -143,29 +144,31 @@ export const FindProvider = () => {
       >
         Explore Providers
       </button>
-
+</div>
+<div className="container">
       <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
           </tr>
         </thead>
         <tbody>
-          {providers.map(p => {
-            return  <tr>
-            <th scope="row">1</th>
-            <td>{p.name}</td>
-            <td>{p.last_name}</td>
-            <td>{p.email}</td>
-          </tr>
+          {providers.map((p) => {
+            return (
+              <tr>
+                <th scope="row">1</th>
+                <td>{p.name}</td>
+                <td>{p.last_name}</td>
+                <td>{p.email}</td>
+              </tr>
+            );
           })}
-         
-          
         </tbody>
       </table>
-    </>
+      </div>
+    </div>
   );
 };

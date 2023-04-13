@@ -1,45 +1,51 @@
 export const FormMain = () => {
   return (
-    <div className="container form">
-      <div className="row g-3">
-        <div className="col-6">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="First name"
-            aria-label="First name"
-          />
+      <div className="container form">
+        <div className="row g-3 justify-content-md-center mb-3">
+          <div className="col-md-4">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="First name"
+              aria-label="First name"
+            />
+          </div>
+          <div className="col-md-4">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Last name"
+              aria-label="Last name"
+            />
+          </div>
+          </div>
+          <div className="row justify-content-md-center mb-3">
+          <div className="col-md-4">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Email Address"
+              aria-label="First name"
+            />
+          </div>
+          <div className="col-md-4">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Phone Number"
+              aria-label="Last name"
+            />
+          </div>
+
+          </div>
+          <p>
+            By submitting this form, you agreeing with C Healing &lsquo;s privacy
+            policy
+          </p>
+          <button type="button" class="btn btn-outline-secondary">
+            SIGN IN
+          </button>
         </div>
-        <div className="col-6">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Last name"
-            aria-label="Last name"
-          />
-        </div>
-        <div className="col">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Email Address"
-            aria-label="First name"
-          />
-        </div>
-        <div className="col">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Phone Number"
-            aria-label="Last name"
-          />
-        </div>
-        <p>By submitting this form, you agreeing with C Healing's
-privacy policy</p>
-        <button type="button" class="btn btn-outline-secondary">
-          SIGN IN
-        </button>
-      </div>
-    </div>
+
   );
 };

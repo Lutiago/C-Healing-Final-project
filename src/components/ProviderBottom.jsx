@@ -1,6 +1,6 @@
 export const ProviderBottom = () => {
     return (
-
+<>
 <div className="d-flex align-items-left justify-content-left">
         <span className="fs-2">
           How does
@@ -11,7 +11,7 @@ export const ProviderBottom = () => {
       <div className="d-flex align-items-center justify-content-right">
      <span className="fs-7">
           C Healing is a community of independent mental health care providers.
-          While our team helps you navigate the search process, we don’t
+          While our team helps you navigate the search process, we don&lsquo;t
           prescribe the rest. Each provider at C Healing sets their own rates
           and makes their own decisions about going in-network with major
           insurance payers.
@@ -23,5 +23,7 @@ export const ProviderBottom = () => {
            
      </span>
       </div>
+      </>
     );
 }
+
