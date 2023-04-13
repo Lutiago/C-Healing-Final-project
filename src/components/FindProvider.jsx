@@ -158,13 +158,13 @@ export const FindProvider = () => {
           <tbody>
             {providers.map((p) => {
               return (
-                <tr>
+                <tr key={p.id}>
                   <th scope="row">
                     1
                   </th>
-                  <td key={p.name}>{p.name}</td>
-                  <td key={p.last_name}>{p.last_name}</td>
-                  <td key={p.email}>{p.email}</td>
+                  <td>{p.name}</td>
+                  <td>{p.last_name}</td>
+                  <td>{p.email}</td>
                 </tr>
               );
             })}
