@@ -42,7 +42,7 @@ export const FormMain = () => {
             By submitting this form, you agreeing with C Healing &lsquo;s privacy
             policy
           </p>
-          <button type="button" class="btn btn-outline-secondary">
+          <button type="button" className="btn btn-outline-secondary">
             SIGN IN
           </button>
         </div>

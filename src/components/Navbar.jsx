@@ -33,18 +33,18 @@ export default function Navbar() {
             <Link className="btn btn-outline-secondary" href="/ProviderLogin">
             Provider Login
             </Link>
-            <div class="dropdown">
+            <div className="dropdown">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                className="btn btn-secondary dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 EN
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     ESP
                   </a>
                 </li>
