@@ -7,15 +7,15 @@ export const Insurance = () => {
         Our treatments and programs are covered by most insurance companies
         including:
       </h6>
-      <p>
-        <Image src="/images/Insurance.png" width={410} height={90} />
+      <p className="p-2">
+        <Image src="/images/Insurance.png" width={410} height={60} />
       </p>
-      <h8 className="text-center mt-5">
+      <h8 className="text-center mt-5 p-2">
       Interested in request a consultant? Fill out the form below and register to be part of our family.{" "}
       </h8>
-      <h4 className="text-center mt-5">
+      <h3 className="text-center mt-5 p-1">
         Experience a clinician first-approach to <br/>mental health care{" "}
-      </h4>
+      </h3>
     </div>
   );
 };
