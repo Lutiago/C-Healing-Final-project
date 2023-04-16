@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Insurance = () => {
   return (
     <div className="text-center">
-      <h6 className="text-center mt-5">
+      <h6 className="text-center mt-5 p-1">
         Our treatments and programs are covered by most insurance companies
         including:
       </h6>
