@@ -1,11 +1,9 @@
-import Navbar from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { slideAbout } from "@/components/slideAbout";
+import { ProviderLogin} from "@/components/pLogin"
 
-export default function ProviderLogin() {
+export default function providerLogin() {
   return (
     <div className="text-center">
-      <slideAbout />
+      <providerLogin />
     </div>
   );
 }
