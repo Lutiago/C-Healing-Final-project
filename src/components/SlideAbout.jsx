@@ -1,20 +1,26 @@
 import Image from "next/image";
 
-export default function slAbout () {
+export default function SlideAbout() {
   return (
     <div>
       <div className="relative">
         <Image
-          src="/images/Rectangle 4.png"
+          src="/images/Rectangle1.png"
           className="grid text-center"
           width={800}
           height={500}
         />
         <div className="position-absolute top-50 start-50 translate-middle">
           <div className="d-flex align-items-center justify-content-center text-white">
-            <span className="fs-2"> Mental health care<br/> that make sense</span>
+            <span className="fs-2">
+              {" "}
+              Mental health care
+              <br /> that make sense
+            </span>
           </div>
-          <button type="button" className="btn btn-outline-dark mt-3">FIND THERAPIST</button>
+          <button type="button" className="btn btn-outline-dark mt-3">
+            FIND THERAPIST
+          </button>
         </div>
       </div>
       <Image
@@ -23,6 +29,6 @@ export default function slAbout () {
         width={500}
         height={500}
       />
-    </div> 
+    </div>
   );
 }

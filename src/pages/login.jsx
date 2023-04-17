@@ -17,11 +17,15 @@ export default function Home() {
 
   if (!user) {
     return (
-      <Auth
-        supabaseClient={supabase}
-        appearance={{ theme: ThemeSupa }}
-        providers={[]}
-      />
+      <div className="row g-3 justify-content-md-center mb-3">
+        <div className="col-md-4">
+          <Auth
+            supabaseClient={supabase}
+            appearance={{ theme: ThemeSupa }}
+            providers={[]}
+          />
+        </div>
+      </div>
     );
   }
 

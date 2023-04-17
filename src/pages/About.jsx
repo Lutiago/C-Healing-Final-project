@@ -1,9 +1,9 @@
-import { slideAbout} from "@/components/slideAbout";
+import SlideAbout from "@/components/SlideAbout";
 
-export default function sAbout() {
+export default function About() {
   return (
     <div className="text-center">
-      <slideAbout />
-       </div>
-       );
+      <SlideAbout />
+    </div>
+  );
 }

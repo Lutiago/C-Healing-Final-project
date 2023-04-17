@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const FormMain = () => {
   return (
       <div className="container form">
@@ -42,9 +44,7 @@ export const FormMain = () => {
             By submitting this form, you agreeing with C Healing &lsquo;s privacy
             policy
           </p>
-          <button type="button" className="btn btn-outline-secondary">
-            SIGN IN
-          </button>
+          <div className="btn btn-outline-secondary"><Link href="/login">Login</Link></div>
         </div>
 
   );

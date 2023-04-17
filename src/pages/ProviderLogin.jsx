@@ -1,9 +1,9 @@
-import { ProviderLogin} from "@/components/pLogin"
+import { PLogin } from "@/components/PLogin"
 
-export default function providerLogin() {
+export default function ProviderLogin() {
   return (
     <div className="text-center">
-      <providerLogin />
+      <PLogin />
     </div>
   );
 }

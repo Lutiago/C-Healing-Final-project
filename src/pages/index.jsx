@@ -11,7 +11,8 @@ export default function Home() {
       </div>
       <Insurance />
       <FormMain />
-      <Link href="/login">Login</Link>
+      
+      
     </div>
   );
 }
