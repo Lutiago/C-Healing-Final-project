@@ -8,7 +8,7 @@ export const Insurance = () => {
         including:
       </h6>
       <p className="p-2">
-        <Image src="/images/Insurance.png" width={410} height={60} />
+        <Image src="/images/Insurance.png" alt="insurance" width={410} height={60} />
       </p>
       <h8 className="text-center mt-5 p-2">
       Interested in request a consultant? Fill out the form below and register to be part of our family.{" "}
