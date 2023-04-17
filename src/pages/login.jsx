@@ -13,7 +13,7 @@ export default function Home() {
     if (user) {
       router.replace(returnPath || "/dashboard");
     }
-  }, [user, router]);
+  }, [user, router, returnPath]);
 
   if (!user) {
     return (

@@ -7,6 +7,7 @@ export default function SlideAbout() {
         <Image
           src="/images/Rectangle1.png"
           className="grid text-center"
+          alt="green"
           width={800}
           height={500}
         />
@@ -26,6 +27,7 @@ export default function SlideAbout() {
       <Image
         src="/images/About.png"
         className="grid text-center"
+        alt="pictureguy"
         width={500}
         height={500}
       />

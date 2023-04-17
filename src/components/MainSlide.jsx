@@ -9,6 +9,7 @@ export default function MainSlide() {
         <Image
           src="/images/Rectangle 1.png"
           className=" grid text-center"
+          alt="greencolor"
           width={800}
           height={500}
         />
@@ -27,6 +28,7 @@ export default function MainSlide() {
       </div>
       <Image
         src="/images/homepage2.png"
+        alt="home"
         className=" grid text-center"
         width={500}
         height={500}

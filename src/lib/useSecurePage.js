@@ -10,5 +10,5 @@ export const useSecurePage = (returnPage = "/dashboard") => {
     if (!user) {
       router.replace(`/login?ret=${returnPage}`);
     }
-  }, [user, router]);
+  }, [user, router, returnPage]);
 };
