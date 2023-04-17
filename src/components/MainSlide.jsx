@@ -7,7 +7,7 @@ export default function MainSlide() {
       {" "}
       <div className="relative">
         <Image
-          src="/images/Rectangle 1.png"
+          src="/images/Rectangle1.png"
           className=" grid text-center"
           alt="greencolor"
           width={800}
