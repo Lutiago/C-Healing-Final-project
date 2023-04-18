@@ -30,7 +30,7 @@ export default function SlideAbout() {
         </div>
       </div>
 
-      <div className="row p-2 ">
+      <div className="row p-2 justify-content-md-center ">
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
