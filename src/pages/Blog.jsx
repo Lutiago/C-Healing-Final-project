@@ -1,9 +1,9 @@
-import { slideAbout } from "@/components/SlideAbout";
+import { BlogMain } from "@/components/BlogMain";
 
-export default function Blog() {
+export default function Blog () {
   return (
     <div className="text-center">
-      <slideAbout />
+      <BlogMain />
     </div>
   );
 }
