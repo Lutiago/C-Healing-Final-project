@@ -12,7 +12,7 @@ export default function SlideAbout() {
           height={500}
         />
         <Image
-          src="/images/Rectangle1.png"
+          src="/images/BlueRectangle.png"
           className="grid text-center relative"
           alt="green"
           width={820}
