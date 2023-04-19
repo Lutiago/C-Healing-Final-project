@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, InputGroup, Dropdown, DropdownButton } from "react-bootstrap";
 import { MdChair } from "react-icons/md";
 import { BsFillHouseHeartFill } from "react-icons/bs";
+import {BsFillPersonLinesFill} from "react-icons/bs"
+import {ImLocation} from "react-icons/im";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useQuery } from "@tanstack/react-query";
 
@@ -96,7 +98,7 @@ export const FindProvider = () => {
         </div>
         <div className="input-group mb-3">
           <label className="input-group-text" htmlFor="inputGroupSelect01">
-            <BsFillHouseHeartFill /> Your state*
+            <ImLocation /> Your state*
           </label>
           <select
             className="form-select"
@@ -122,7 +124,7 @@ export const FindProvider = () => {
         </div>
         <div className="input-group mb-3">
           <label className="input-group-text" htmlFor="inputGroupSelect01">
-            <BsFillHouseHeartFill /> Virtual or in person?
+            <BsFillPersonLinesFill /> Virtual or in person?
           </label>
           <select
             className="form-select"
