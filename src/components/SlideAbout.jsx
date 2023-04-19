@@ -34,10 +34,25 @@ export default function SlideAbout() {
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
+              <h5 className="card-title">DEPRESSION</h5>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+              Feelings of sadness, emptiness or hopelessness.
+              Angry outbursts, irritability or frustration
+              Loss of interest or pleasure in most or all normal activities
+              Sleep disturbances, including insomnia or sleeping too much.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 mb-3">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">PTSD / TRAUMA </h5>
+              <p className="card-text">
+              Vivid flashbacks
+              Intrusive thoughts or images. 
+              Intense distress at reminders of the trauma.
+              Physical sensations such as pain, sweating, or nausea.
               </p>
             </div>
           </div>
@@ -46,15 +61,19 @@ export default function SlideAbout() {
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
+              <h5 className="card-title">ANXIETY</h5>
               <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
+              Feeling restless, wound-up, or on-edge.
+              Being easily fatigued. 
+              Having difficulty concentrating.
+              Difficulty controlling feelings of worry.
+              Difficulty falling or staying asleep.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   );
 }
