@@ -1,7 +1,10 @@
 import Link from "next/link";
+
+
 export const PLogin = () => {
   return (
-    <div className="container form">
+    
+    <div className="container form ">
     <div className="row g-3 justify-content-md-center mb-3">
       <div className="col-md-4">
         <input

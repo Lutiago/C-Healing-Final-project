@@ -1,21 +1,24 @@
 import Image from "next/image";
+import {RxSwitch} from "react-icons/rx"
 
 export default function SlideAbout() {
   return (
     <div>
+      <div className="relative d-flex flex-row justify-content-center">
+      {" "}
       <div className="relative">
         <Image
           src="/images/About.png"
-          className="grid text-center absolute"
+          className="grid text-center"
           alt="pictureguy"
           width={500}
           height={500}
         />
         <Image
           src="/images/BlueRectangle.png"
-          className="grid text-center relative"
+          className="grid text-center"
           alt="green"
-          width={820}
+          width={800}
           height={500}
         />
 
@@ -29,12 +32,13 @@ export default function SlideAbout() {
           </div>
         </div>
       </div>
+      </div>
 
       <div className="row p-2 justify-content-md-center ">
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">DEPRESSION</h5>
+              <h5 className="card-title ml">DEPRESSION <RxSwitch /> </h5>
               <p className="card-text">
               Feelings of sadness, emptiness or hopelessness.
               Angry outbursts, irritability or frustration
@@ -47,7 +51,7 @@ export default function SlideAbout() {
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">PTSD / TRAUMA </h5>
+              <h5 className="card-title">PTSD / TRAUMA  <RxSwitch /> </h5>
               <p className="card-text">
               Vivid flashbacks
               Intrusive thoughts or images. 
@@ -61,7 +65,7 @@ export default function SlideAbout() {
         <div className="col-md-3 mb-3">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">ANXIETY</h5>
+              <h5 className="card-title">ANXIETY  <RxSwitch /></h5>
               <p className="card-text">
               Feeling restless, wound-up, or on-edge.
               Being easily fatigued. 

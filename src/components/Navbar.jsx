@@ -4,7 +4,8 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex pb-5">
-      <div className="justify-content-center container-fluid position-relative top-100 start-50 translate-middle-x ">
+
+      <div className="justify-content-center container-fluid position-relative  top-100 start-50 translate-middle-x ">
         <div
           className="collapse navbar-collapse justify-content-center"
           id="navbarNavAltMarkup"
@@ -59,5 +60,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    
   );
 }

@@ -12,3 +12,16 @@
     background-color: #3BAAC8;
     height: 150px;
 }
+.navbar {
+    @media (max-width: 992px) {
+        .navbar-expand-lg {
+          display: none;
+        }
+        .navbar-toggler {
+          display: block;
+        }
+        .navbar-nav {
+          flex-direction: column;
+        }
+      }
+}
