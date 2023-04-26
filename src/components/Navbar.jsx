@@ -36,7 +36,7 @@ export default function Navbar() {
             <Link className="btn btn-secondary" href="/FindTherapist">
               Find Therapist
             </Link>
-            <Link className="btn btn-outline-secondary" href="/ProviderLogin">
+            <Link className="btn btn-outline-secondary" href="/dashboard">
               Provider Login
             </Link>
             <div className="dropdown">

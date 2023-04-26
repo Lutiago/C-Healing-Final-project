@@ -25,7 +25,7 @@ export const FindProvider = () => {
     queryFn: getInsuranceCarriers,
   });
   const handleExplore = async () => {
-    let query = supabase.from("Providers").select("*");
+    let query = supabase.from("Providers").select("*,insurance_provider(*)");
     if (selectedState !== "") {
       query = query.eq("state", selectedState);
     }
@@ -154,20 +154,26 @@ export const FindProvider = () => {
               <th scope="col">#</th>
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
-              <th scope="col">Email</th>
+              <th scope="col">Specialty</th>
+              <th scope="col">Insurance Carriers</th>
+              <th scope="col">Virtual or in person</th>
             </tr>
           </thead>
           <tbody>
-            {providers.map((p) => {
+            {providers.map((p,index) => {
               return (
                 <tr key={p.id}>
                   <th scope="row">
-                    1
+                    {index}
                   </th>
                   <td>{p.name}</td>
                   <td>{p.last_name}</td>
-                  <td>{p.email}</td>
+                  <td>{p.specialty}</td>
+                  <td>{p.insurance_provider.map(insuranceProvider => {
+                    return insuranceCarriers.data.find(x=>x.id===insuranceProvider.carrier_id).name 
+                  }).join(", ")}</td>
                 </tr>
+                //
               );
             })}
           </tbody>
