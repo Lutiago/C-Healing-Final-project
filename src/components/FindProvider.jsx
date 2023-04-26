@@ -6,6 +6,8 @@ import {BsFillPersonLinesFill} from "react-icons/bs"
 import {ImLocation} from "react-icons/im";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useQuery } from "@tanstack/react-query";
+import {ImCheckmark} from "react-icons/im"
+import Link from "next/link";
 
 export const FindProvider = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -156,7 +158,9 @@ export const FindProvider = () => {
               <th scope="col">Last Name</th>
               <th scope="col">Specialty</th>
               <th scope="col">Insurance Carriers</th>
-              <th scope="col">Virtual or in person</th>
+              <th scope="col">Virtual</th>
+              <th scope="col">In person</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -172,6 +176,10 @@ export const FindProvider = () => {
                   <td>{p.insurance_provider.map(insuranceProvider => {
                     return insuranceCarriers.data.find(x=>x.id===insuranceProvider.carrier_id).name 
                   }).join(", ")}</td>
+                  <td>{p.virtual && <ImCheckmark/>}</td>
+                  <td>{p.in_person && <ImCheckmark/>}</td>
+                  <td><Link href={'/contact/'+p.id}>contact</Link></td>
+                  
                 </tr>
                 //
               );
