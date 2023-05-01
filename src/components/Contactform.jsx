@@ -55,8 +55,9 @@ export const Contactform = () => {
             />
           </div>
         </div>
+        <h5>Prefered days of the week?</h5>
         <div className="container">
-          <div className="row justify-content-md-left mb-3">
+          <div className="row justify-content-md-left">
             <div className="form check col ">
               <input
                 {...register("day_monday")}
@@ -65,6 +66,7 @@ export const Contactform = () => {
                 value=""
                 id="flexCheckDefault"
               />
+
               <label className="form-check-label" htmlFor="flexCheckDefault">
                 Monday
               </label>
@@ -109,7 +111,7 @@ export const Contactform = () => {
                 Friday
               </label>
             </div>
-
+            <h5> What time do you prefer? </h5>
             <div className="container">
               <input
                 {...register("time_morning")}
@@ -138,22 +140,22 @@ export const Contactform = () => {
                 value=""
                 id="flexCheckDefault"
               />
-              <label className="form-check-label" htmlFor="flexCheckDefault">
+              <label className="form-check-label " htmlFor="flexCheckDefault">
                 Night
               </label>
             </div>
 
-            <div className="row g-3 justify-content-md">
-              <div className="col-md-4">
+            <div className="row g-3 d-flex justify-content-center align-items-center ">
+              <div className="col-lg-6 d-flex justify-content-center align-items-center">
                 <textarea
                   rows={7}
-                  className="form-control"
+                  className="form-control "
                   placeholder="What brings you here today?"
                   aria-label=""
                 />
               </div>
 
-              <div className="container">
+              <div className="container p-2">
                 <input
                   {...register("virtual")}
                   className="form-check-input"
@@ -180,7 +182,7 @@ export const Contactform = () => {
 
           <p>Our provider will reach out to you to schedule the consultation</p>
         </div>
-        <input type="submit" />
+        <input {...register("submit")} type="submit" />
       </form>
     </div>
   );
