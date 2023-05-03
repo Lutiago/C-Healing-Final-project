@@ -1,5 +1,7 @@
 import { useSupabaseClient, useUser } from "@supabase/auth-helpers-react";
 import { useQuery } from "@tanstack/react-query";
+import { FormMain } from "./FormMain";
+import { FormProfile } from "./Formprofile";
 
 export const ProfileUpdate = () => {
   const supabase = useSupabaseClient();
@@ -17,5 +19,10 @@ export const ProfileUpdate = () => {
     queryFn: getProvider,
     enabled: !!user,
   });
-  return <div>Profile update:{data && data.name}</div>;
+  return (
+    <div>
+      <FormProfile />
+      {data && data.name}
+    </div>
+  );
 };
