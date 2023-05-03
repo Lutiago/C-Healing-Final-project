@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ProfileUpdate } from "./ProfileUpdate";
+import { BsCalendar } from "react-icons/bs";
 
 export const ProviderProfile = () => {
   const [selectedTab, setSelectedTab] = useState("profile");
@@ -56,7 +57,11 @@ export const ProviderProfile = () => {
 
       {selectedTab === "requests" && <div>Show Requests List</div>}
 
-      {selectedTab === "calendar" && <div>Show Calendar</div>}
+      {selectedTab === "calendar" && (
+        <div> calendar
+  
+        </div>
+      )}
     </div>
   );
 };

@@ -7,12 +7,12 @@ export const FormProfile = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Specialty</th>
-            <th scope="col">Insurance Carriers</th>
-            <th scope="col">Virtual</th>
-            <th scope="col">In person</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Prefered days of the week?</th>
+            <th scope="col">What time do you prefer?</th>
+            <th scope="col">Virtual/In Person</th>
             <th></th>
           </tr>
         </thead>
