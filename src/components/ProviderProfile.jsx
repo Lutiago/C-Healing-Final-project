@@ -21,18 +21,38 @@ export const ProviderProfile = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a
+            className={
+              "nav-link " + (selectedTab === "request" ? "active" : "")
+            }
+            aria-current="page"
+            href="#"
+            onClick={() => {
+              setSelectedTab("request");
+            }}
+          >
             Request
           </a>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">
+          <a
+            class={"nav-link " + (selectedTab === "calendar" ? "active" : "")}
+            aria-current="page"
+            href="#"
+            onClick={() => {
+              setSelectedTab("calendar");
+            }}
+          >
             Calendar
           </a>
         </li>
       </ul>
 
-      {selectedTab === "profile" && <div><ProfileUpdate /></div>}
+      {selectedTab === "profile" && (
+        <div>
+          <ProfileUpdate />
+        </div>
+      )}
 
       {selectedTab === "requests" && <div>Show Requests List</div>}
 
